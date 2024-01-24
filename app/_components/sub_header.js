@@ -6,7 +6,7 @@ export default function SubHeader() {
   const buttonGroupStyles = "flex gap-8"
 
   return (
-    <div className="bg-[#F0F1F1]">
+    <div className="bg-[#F0F1F1] max-sm:hidden">
       <div className="flex justify-between container xl:w-[76.25rem]">
         {/*  Starting Button Group */}
         <div className={buttonGroupStyles}>

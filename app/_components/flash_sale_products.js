@@ -48,11 +48,11 @@ export default function FlashSaleProducts() {
       <div className="bg-white px-6 py-3 flex flex-col gap-4">
         <div className="flex justify-between sticky top-0 left-0">
           <div className="flex justify-items-center items-center gap-36">
-            <div className="text-primary-600 text-xl font-medium">
+            <div className="text-primary-600 text-xl sm:text-base font-medium">
               Flash Sale
             </div>
             <div className=" flex items-center justify-items-center text-[#707070] font-normal">
-              <div className="mr-5"> Ending in </div>
+              <div className="mr-5 max-sm:hidden"> Ending in </div>
               <div className="btn-box">{timeRemaining.hours}</div> :
               <div className="btn-box"> {timeRemaining.minutes} </div> :
               <div className="btn-box"> {timeRemaining.seconds}</div>

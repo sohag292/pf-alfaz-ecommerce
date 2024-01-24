@@ -76,15 +76,15 @@ function ProductImage({product, view}) {
 function FreeShippingTitle() {
   return (
     <div className="flex gap-1 items-center px-2">
-      <div className="h-4 w-5"><Image src={freeDeliveryIcon} alt="free delivery icon"/></div>
-      <div className="italic font-semibold text-zinc-400 text-xs leading-none -mb-0.5">Free Shipping</div>
+      <div className="h-4 w-5 md:h-5 md:w-5"><Image src={freeDeliveryIcon} alt="free delivery icon"/></div>
+      <div className="italic font-semibold text-zinc-400 text-xs leading-none -mb-0.5 md:text-sm">Free Shipping</div>
     </div>
   );
 }
 
 function Price({product, view}) {
   return (
-    <div className="flex gap-2 items-center">
+    <div className="flex gap-2 items-center text-xs md:text-sm">
       <div className="text-primary-500 font-semibold">৳ {product.price}</div>
       {product.cutPrice &&
         <div className="text-zinc-500 text-xs line-through">

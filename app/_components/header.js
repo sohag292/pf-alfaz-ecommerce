@@ -7,7 +7,7 @@ import cartIcon from "@/app/_assets/icons/cart.svg";
 import cloudServiceCardSvg from "@/app/_assets/cloud_service_card.svg";
 
 export default function Header() {
-  return (<div className="bg-white">
+  return (<div className="bg-white max-sm:hidden">
     <div className="container xl:w-[76.25rem] flex gap-8 py-2 items-center">
       <Logo/>
       <SearchBar/>

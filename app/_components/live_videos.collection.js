@@ -14,13 +14,39 @@ export default function LiveVideosCollection() {
     slidesToScroll: 6,
     prevArrow: <Arrow flip={true} />,
     nextArrow: <Arrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (
-    <div className="container xl:w-[76.25rem]">
+    <div className="container mx-auto px-4 xl:w-full">
       <div className="bg-white px-6 py-3 flex flex-col gap-4 ">
-        <div className="flex justify-between sticky top-0 left-0">
-          <div className="text-primary-600 text-xl">Alzaf Live</div>
+        <div className="flex  md:flex-row  justify-between items-center">
+          <div className="text-primary-600 text-xl md:text-2xl lg:text-3xl">Alzaf Live</div>
           <button className="text-primary-500 flex">See more <Image src={expandRightIcon} alt="icon"/></button>
         </div>
 

@@ -22,12 +22,12 @@ export default function JustForYou() {
   const isLoadMoreVisible = visibleProductsData.length < products.length;
 
   return (
-    <div className="container xl:w-[76.25rem]">
+    <div className="container mx-auto xl:w-[76.25rem]">
       <div className="bg-white px-0 py-3 flex flex-col gap-4">
         <div className="text-center">
           <div className="text-primary-600 text-xl">Just For You</div>
         </div>
-        <div className="flex gap-3 flex-wrap">
+        <div className="flex gap-3 flex-wrap justify-center">
           {visibleProductsData.map((data, index) => (
             <ProductCard key={index} data={data} />
           ))}
@@ -36,7 +36,7 @@ export default function JustForYou() {
           <div className="flex justify-center items-center mt-4">
             <div>
               <button
-                className="bg-white border border-primary-400 py-2 px-40 text-primary-400 rounded-md"
+                className="bg-white border border-primary-400  py-2 px-40 text-primary-400 rounded-md"
                 onClick={() => setNumberOfItemsToShow((prev) => prev + 12)}
               >
                 Load More

@@ -113,7 +113,7 @@ export default function CategoryMenu() {
 
   return (
     <div
-      className="relative z-10"
+      className="relative max-sm:hidden z-10"
       onMouseLeave={() => setMenu1HoveredId(undefined)}
     >
       {/* Menu Level 1 */}
