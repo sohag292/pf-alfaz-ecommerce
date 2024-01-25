@@ -12,11 +12,37 @@ export default function ProductCategories() {
     slidesToScroll: 6,
     prevArrow: <Arrow flip={true} />,
     nextArrow: <Arrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (
     <div className="container xl:w-[76.25rem]">
-      <div className="bg-white px-6 py-3 flex flex-col gap-4">
+      <div className="bg-white px-10 py-3 flex flex-col gap-4">
         <div className="flex justify-between sticky top-0 left-0">
           <div className="text-primary-600 text-xl">Categories</div>
         </div>
@@ -24,7 +50,7 @@ export default function ProductCategories() {
         <div className="">
         <Slider {...sliderSettings}>
         {Array(20).fill(0).map((_, index) => (
-              <div key={index} className=" border-t border-r border-b-4 border-gray-200 flex flex-col items-center p-4 min-w-40">
+              <div key={index} className=" border-t border-r border-b border-gray-200 flex flex-col items-center p-4 min-w-40">
                 <div className="mb-2">
                   <Image src={productCategoryDefaultImage} className="w-24" alt={`category-${index}`} />
                 </div>

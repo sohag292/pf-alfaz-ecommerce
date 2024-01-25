@@ -13,20 +13,25 @@ import ProductCategories from "./Product_categories";
 export default function MainContent() {
   return (
     <div className="bg-zinc-100 py-3 flex flex-col gap-3">
-      <HeroSection/>
+      {/* problem */}
+       <HeroSection/>
+      
 
       <ShopCategories/>
 
       <FlashSaleProducts/>
       
-      <ProductCategories/>
+      <ProductCategories/> 
 
       <FreeDeliveryProducts/>
-
+      
+     
       <ComputerAccessoriesProducts/>
 
+  
       <KitchenAndDiningProducts/>
 
+ 
       <BikeAccessoriesProducts/>
 
       <LiveVideosCollection/>

@@ -43,7 +43,7 @@ function ProductSlider({ productsData, title }) {
 
   return (
     <div className="container xl:w-[76.25rem]">
-      <div className="bg-white px-6 py-3 flex flex-col gap-4">
+      <div className="bg-white px-11 py-3 flex flex-col gap-4">
         <div className="flex justify-between sticky top-0 left-0">
           <div className="text-primary-600 text-xl">{title}</div>
           <button className="text-primary-500 flex">

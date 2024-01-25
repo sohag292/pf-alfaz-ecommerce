@@ -27,10 +27,11 @@ export default function Slideshow() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3500,
+    
     customPaging: function (i) {
       return (
         <div
-          className={`w-3 h-3  -mt-12 ${
+          className={`md:w-3 md:h-3  -mt-12 ${
             currentSlide === i ? 'bg-primary-500' : 'bg-gray-300'
           } rounded-full`}
         />
@@ -40,10 +41,11 @@ export default function Slideshow() {
   };
 
   return (
-    <div className="min-w-0 mb-12 pr-4">
+    <div className="min-w-0 max-sm:mb-0 mb-6 ml-2 ">
+      
       <Slider {...settings}>
         {slideImages.map((img) => (
-          <div className="h-full w-full" key={img[0]}>
+          <div className="h-full w-full mx-auto" key={img[0]}>
             <Image className="" src={img[1]} alt="images" />
           </div>
         ))}

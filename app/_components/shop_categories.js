@@ -16,7 +16,7 @@ export default function ShopCategories() {
   ]
 
   return (
-    <div className="container xl:w-[76.25rem] grid grid-cols-5 gap-3">
+    <div className="container xl:w-[76.25rem] grid max-sm:justify-items-center grid-cols-5 gap-2">
       {buttonIconTextMap.map(data => (
         <ShopButton text={data[0]} icon={data[1]} />
       ))}
@@ -26,14 +26,14 @@ export default function ShopCategories() {
 
 function ShopButton({icon, text}) {
   return (
-    <button className="bg-white rounded-full p-2 flex items-center justify-between">
-      <div className="flex items-center gap-4">
-        <div className="size-9 rounded-full bg-primary-100 p-1.5">
-          <Image src={icon} alt={"right icon"}/>
+    <button className="lg:bg-white rounded-full p-2 flex items-center justify-between">
+      <div className="lg:flex  lg:items-center gap-2">
+        <div className="size-12 max-sm:p-3 shrink-1 rounded-full bg-white lg:bg-primary-100  lg:p-1.5">
+          <Image src={icon} alt={"shop icon"}/>
         </div>
-        <div className="text-base font-semibold text-zinc-900">{text}</div>
+        <div className=" max-sm:mt-2 text-[8px] lg:text-[14px]  font-semibold text-zinc-900">{text}</div>
       </div>
-      <Image src={chevronRightIcon} alt={"right icon"}/>
+      <Image src={chevronRightIcon} className="max-sm:hidden " alt={"right icon"}/>
     </button>
   );
 }

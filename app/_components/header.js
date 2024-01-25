@@ -7,7 +7,7 @@ import cartIcon from "@/app/_assets/icons/cart.svg";
 import cloudServiceCardSvg from "@/app/_assets/cloud_service_card.svg";
 
 export default function Header() {
-  return (<div className="bg-white max-sm:hidden">
+  return (<div className="bg-white  max-sm:hidden ">
     <div className="container xl:w-[76.25rem] flex gap-8 py-2 items-center">
       <Logo/>
       <SearchBar/>
@@ -18,11 +18,11 @@ export default function Header() {
 }
 
 function Logo() {
-  return <Image src={brandLogo} alt="Brand Logo" className="w-32"/>;
+  return <Image src={brandLogo} alt="Brand Logo" className="w-32 max-sm:hidden"/>;
 }
 
 function SearchBar() {
-  return (<div className="flex-grow flex bg-zinc-200/80 rounded-xl">
+  return (<div className="flex-grow  flex bg-zinc-200/80 rounded-xl">
     <input className="bg-transparent px-4 text-sm h-11 rounded-xl flex-grow placeholder:text-zinc-500" type="text"
            placeholder="Search Product"/>
     <button className="size-11 bg-primary-500 rounded-xl p-3">
@@ -35,16 +35,16 @@ function Menu() {
   const buttonIcons = [accountIcon, favouriteIcon, cartIcon];
 
   function IconButton({children}) {
-    return (<button className="size-11 bg-zinc-100 rounded-xl p-3">
+    return (<button className="size-11 max-sm:hidden bg-zinc-100 rounded-xl p-3">
       <Image src={children} alt="search icon"/>
     </button>);
   }
 
-  return (<div className="flex gap-3">
+  return (<div className="flex gap-3 max-sm:hidden">
     {buttonIcons.map(icon => (<IconButton>{icon}</IconButton>))}
   </div>);
 }
 
 function CloudServiceCard() {
-  return (<Image src={cloudServiceCardSvg} alt="cloud service card"/>);
+  return (<Image src={cloudServiceCardSvg} className="max-sm:hidden" alt="cloud service card"/>);
 }
