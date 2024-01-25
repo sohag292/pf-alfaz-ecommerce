@@ -12,7 +12,7 @@ import category from "./assets/responsiveicon/category.svg";
 import message from "./assets/responsiveicon/message.svg";
 import navbarhome from "./assets/responsiveicon/navbar-home-active.svg";
 import profile from "./assets/responsiveicon/profile.svg";
-import vector from "./assets/responsiveicon/vector.svg";
+import vector from "./assets/responsiveicon/Vector.svg";
 
 const companyLinks = [
   { label: "About Alzaf", url: "#" },
